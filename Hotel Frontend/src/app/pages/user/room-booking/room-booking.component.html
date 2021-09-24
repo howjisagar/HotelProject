@@ -1,0 +1,51 @@
+
+<app-user-side-nav></app-user-side-nav>
+<style>
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+  </style>
+<div  style="margin-left: 200px;margin-top: 50px;">
+  <div >
+
+    <h1 style="text-align: center;margin-top: 20px;">Room Details</h1>
+    
+    <table class="table text-center">
+
+      <thead>
+        <tr>
+          <td>Id</td>
+          <td>Title</td>
+          <td>Description</td>
+          <td>Price</td>
+          <td>Action</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let room of rooms">
+          <td>{{room.roomId}}</td>
+          <td>{{room.roomTitle}}</td>
+          <td>{{room.roomDescription}}</td>
+          <td>{{room.roomPrice}}</td>
+          <td>
+            <button (click)="roomBook(room.roomId)" class="btn btn-danger">Book</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div> 
+
+

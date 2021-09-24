@@ -1,0 +1,50 @@
+<style>
+.sidenav {
+    height: 90%;
+    width: 200px;
+    position: absolute;
+    z-index: 1;
+    top: 55px;
+    left: 0;
+    background-color: #111;
+    
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  
+  .sidenav a {
+    padding: 6px 6px 6px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .main {
+    margin-left: 200px; 
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+</style>
+
+
+<div style="width: 20%;">
+    <div class="sidenav">
+        <a>Dashboard</a>
+        <a  routerLink="/admin/admin-profile">Profile</a>
+        <a routerLink="/admin/add-rooms">Add Rooms</a>
+        <a  routerLink="/admin/delete-rooms">Delete Rooms</a>
+        <a  routerLink="logout()">Logout</a>
+        
+    </div>
+    <div class="main">
+
+    </div>
+</div>

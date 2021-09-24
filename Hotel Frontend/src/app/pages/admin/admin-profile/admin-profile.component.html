@@ -1,0 +1,56 @@
+
+<app-admin-side-nav></app-admin-side-nav>
+<style>
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+  </style>
+<div  style="margin-left: 400px;margin-top: 50px;width: 60%;">
+  <div *ngIf="user">
+
+    <h1 style="text-align: center;margin-top: 20px;">Profile Details</h1>
+    <table class="table text-center">
+        <tr *ngIf="user.firstname">
+            <td>Firstname</td>
+            <td>{{ user.first_name }}</td>
+          </tr>
+        <tr *ngIf="user.lastname">
+            <td>Lastname</td>
+            <td>{{ user.last_name }}</td>
+        </tr>
+        <tr >
+          <td>Username</td>
+          <td>{{ user.username }}</td>
+        </tr>
+        <tr >
+          <td>Userid</td>
+          <td>{{ user.id }}</td>
+        </tr>
+        <tr >
+          <td>Phone</td>
+          <td>{{ user.phone }}</td>
+        </tr>
+        <tr >
+          <td>Role</td>
+          <td>{{ user.authorities[0].authority }}</td>
+        </tr>
+        <tr >
+          <td>Status</td>
+          <td>{{ user.enabled ? "ACTIVE" : "NOTACTIVE" }}</td>
+        </tr>
+    </table>
+  </div>
+</div> 
+

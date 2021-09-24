@@ -1,0 +1,100 @@
+<!-- <h1>this is navbar</h1>
+<mat-toolbar color="accent">
+    <a
+      routerLink="/"
+     
+    >
+    </a>
+    <span>Hotel Management Application</span>
+    <span class="example-spacer"></span>
+    <a
+      *ngIf="!isLoggedIn"
+      [routerLink]="'/login'"
+      
+    >
+      Login
+    </a>
+  
+    <a
+      *ngIf="!isLoggedIn"
+      [routerLink]="'/signup'"
+      
+    >
+      Register
+    </a>
+  
+    <a
+      (click)="logout()"
+      *ngIf="isLoggedIn"
+      
+    >
+      Logout
+    </a>
+  
+    <button
+      *ngIf="isLoggedIn && user"
+      class="example-icon favorite-icon ml20"
+      
+    >
+      
+    </button>
+  </mat-toolbar> --> 
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <style>
+    body {font-family: "Times New Roman", Georgia, Serif;}
+    h1, h2, h3, h4, h5, h6 {
+      font-family: "Playfair Display";
+      letter-spacing: 5px;
+    }
+    </style>
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+      <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+        <a href="#home" class="w3-bar-item w3-button"> Hotel Management System</a>
+        <!-- Right-sided navbar links. Hide them on small screens -->
+        <div class="w3-right w3-hide-small"> 
+         <a
+          *ngIf="!isLoggedIn"
+          [routerLink]="'/login'"
+          class="w3-bar-item w3-button"
+        >
+          Login
+        </a>
+      
+        <a
+          *ngIf="!isLoggedIn"
+          [routerLink]="'/signup'"
+          class="w3-bar-item w3-button"
+          
+        >
+          Register
+        </a>
+      
+        <a
+          (click)="logout()"
+          *ngIf="isLoggedIn"
+          class="w3-bar-item w3-button"
+        >
+          Logout
+        </a>
+      
+        <!-- <button
+          *ngIf="isLoggedIn && user"
+          class="w3-bar-item w3-button"
+          routerLink="/admin/profile"
+        >
+          {{ user.username }}
+        </button> -->
+    
+        </div>
+      </div>
+    </div>
+    
+
+    
+
+  

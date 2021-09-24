@@ -1,0 +1,56 @@
+
+<app-user-side-nav></app-user-side-nav>
+<style>
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+  </style>
+<div  style="margin-left: 400px;margin-top: 50px;width: 60%;">
+
+<div *ngIf="user" style="text-align: center;">
+  <h1 style="text-align: center;">Profile Details</h1>
+  <!-- {{ user | json }} -->
+<table class="table text-center">
+    <tr *ngIf="user.firstname">
+        <td>Firstname</td>
+        <td>{{ user.firstname }}</td>
+      </tr>
+    <tr *ngIf="user.lastname">
+        <td>Lastname</td>
+        <td>{{ user.lastname }}</td>
+    </tr>
+    <tr *ngIf="user.username">
+      <td>Username</td>
+      <td>{{ user.username }}</td>
+    </tr>
+    <tr *ngIf="user.Userid">
+      <td>Userid</td>
+      <td>EXAM{{ user.id }}</td>
+    </tr>
+    <tr *ngIf="user.phone">
+      <td>Phone</td>
+      <td>{{ user.phone }}</td>
+    </tr>
+    <tr *ngIf="user.authorities[0].authority">
+      <td>Role</td>
+      <td>{{ user.authorities[0].authority }}</td>
+    </tr>
+    <tr *ngIf="user.enabled">
+      <td>Status</td>
+      <td>{{ user.enabled ? "ACTIVE" : "NOTACTIVE" }}</td>
+    </tr>
+</table>
+</div>
+</div>
